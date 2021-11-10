@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {ListComponent} from './components/list/list.component';
 import {FormComponent} from './components/form/form.component';
 import {PreviewComponent} from './components/preview/preview.component';
+import { AddAsignaturaComponent } from './components/add-asignatura/add-asignatura.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path:'teacher/:id',
     component: PreviewComponent
+  },
+  {
+    path:'teacher/asignatura/:id',
+    component: AddAsignaturaComponent
   },
   {
     path: '',

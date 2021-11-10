@@ -15,12 +15,11 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  uploadTeacher(name:HTMLInputElement, email:HTMLInputElement, office: HTMLInputElement, puntuation: HTMLInputElement, subjects:HTMLInputElement): boolean {
+  uploadTeacher(name:HTMLInputElement, email:HTMLInputElement, office: HTMLInputElement, puntuation: HTMLInputElement): boolean {
     console.log(name.value);
     console.log(email.value);
     console.log(office.value);
     console.log(puntuation.value);
-    console.log(subjects.value);
 
     const teacher: Teacher = {
       _id: '',
@@ -28,7 +27,6 @@ export class FormComponent implements OnInit {
       email: email.value,
       office: office.value,
       puntuation: puntuation.value,
-      subjects: subjects.value,
     }
     this.teacherService.createTeacher(teacher)
       .subscribe(res => {

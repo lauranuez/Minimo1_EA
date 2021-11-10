@@ -45,13 +45,24 @@ export class PreviewComponent implements OnInit {
     )
   }
 
-  updateTeacher(name:HTMLInputElement, email:HTMLInputElement): boolean{
-    this.teacherService.updateTeacher(this.id,name.value,email.value).subscribe(
+  updateTeacher(name:HTMLInputElement, email:HTMLInputElement, office:HTMLInputElement, puntuation:HTMLInputElement): boolean{
+    this.teacher= {
+      _id: this.id,
+      name: name.value,
+      email: email.value,
+      office: office.value,
+      puntuation: puntuation.value,
+    }
+    this.teacherService.updateTeacher(this.id, this.teacher).subscribe(
       res =>{ console.log(res);
       this.router.navigate(['/teachers'])},
       err => console.log(err),
     );
     return false;
+  }
+
+  addAsignatura(id: string){
+    this.router.navigate(['/teacher/asignatura',id]);
   }
 
 }

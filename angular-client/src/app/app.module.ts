@@ -8,6 +8,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { FormComponent } from './components/form/form.component';
 import { PreviewComponent } from './components/preview/preview.component';
 import { ListComponent } from './components/list/list.component';
+import { AddAsignaturaComponent } from './components/add-asignatura/add-asignatura.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ListComponent } from './components/list/list.component';
     NavigationComponent,
     FormComponent,
     PreviewComponent,
-    ListComponent
+    ListComponent,
+    AddAsignaturaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+<div class="col-lg-4 mx-auto"> <!-- dif con espaciado de 4, mx-auto (centrado) -->
+    <div class="card"> <!-- crear tarjeta -->
+        <div class="card-header"> <!-- cabecera -->
+            Añade una asignatura
+        </div>
+        <div class="card-body"> <!-- cuerpo donde creare el form -->
+            <form (submit)="updateTeacher(asignatura)">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Nombre de la asignatura" required #asignatura>
+                </div>
+                <div class="container p-4">
+                    <button class="btn btn-primary btn-block">save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

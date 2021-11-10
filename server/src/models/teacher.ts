@@ -5,7 +5,7 @@ const TeacherSchema = new Schema({
     email:{ type: String, required: true },
     office:{ type: String, required: true },
     puntuation:{ type: String, required: true },
-    subjects:{ type: String }
+    subjects:{ type: [String] }
 });
 
 //Interfaz --> descripcion de un objeto
@@ -14,7 +14,7 @@ interface ITeacher extends Document {
     email:string,
     office:string,
     puntuation:string,
-    subjects:string
+    subjects:[string]
 }
 
 export default model<ITeacher>('Teacher', TeacherSchema);
